@@ -1,4 +1,4 @@
-# vitepress-blog-nex
+# vitepress-blog-nex [开发中]
 
 ## Features
 
