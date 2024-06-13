@@ -2,9 +2,10 @@
 
 ## Features
 
-- 分页
-- 与 VitePrss 默认主题兼容，风格相近
-- SEO 友好
+- [x] 分页
+- [x] 与 VitePrss 默认主题兼容，风格相近
+- [x] SEO 友好
+- [ ] 标签
 
 ## 预览
 
