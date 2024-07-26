@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "VitePress Theme Nex",
-  description: "Blog、更新日志、动态博客",
+  description: "VitePress 主题 Nex 是一个 VitePress 用户设计的现代化博客主题。它不仅提供了简洁美观的视觉风格，还具有多种实用的功能，帮助您快速构建高质量的博客页面。",
   lang: 'zh',
   themeConfig: {
     nav: [
