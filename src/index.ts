@@ -12,3 +12,4 @@ export const NexTheme = {
 }
 
 export { NTransform, type Post as NPost } from './composables/transform'
+export { NPathGen } from './composables/helper'
