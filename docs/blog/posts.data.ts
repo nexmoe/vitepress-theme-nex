@@ -1,5 +1,5 @@
 import { createContentLoader } from 'vitepress'
-import { NTransform, type NPost } from '../../src/'
+import { NTransform, type NPost } from '../../src/composables'
 
 declare const data: NPost[]
 export { data }

@@ -1,7 +1,8 @@
 import fs from 'fs'
 
-export function NPathGen(postsDir) {
-    const files = fs.readdirSync(postsDir);
+export function NPathGen(dir) {
+  const files = fs.readdirSync(dir);
+
     const postCount = files.length;
     const rangeEnd = Math.ceil(postCount / 12); // 向上取整，确保包含所有区间
 
@@ -13,3 +14,5 @@ export function NPathGen(postsDir) {
       return { params: { page: number } };
     });
 }
+
+export { NTransform, type Post as NPost } from './transform'

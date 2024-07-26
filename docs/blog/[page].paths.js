@@ -1,4 +1,4 @@
-import { NPathGen } from "../../src";
+import { NPathGen } from "../../src/composables";
 
 export default {
   paths() {

@@ -10,6 +10,3 @@ export const NexTheme = {
     app.component('NIndex', NIndex)
   }
 }
-
-export { NTransform, type Post as NPost } from './composables/transform'
-export { NPathGen } from './composables/helper'
