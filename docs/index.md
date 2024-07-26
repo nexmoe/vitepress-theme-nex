@@ -79,6 +79,24 @@ export default defineConfig({
 ├── package.json
 ```
 
+### posts.data.ts
+
+```js
+import { createContentLoader } from 'vitepress'
+import { NTransform, type Post } from 'vitepress-theme-nex/composables'
+
+declare const data: Post[]
+export { data }
+
+export default createContentLoader('jobs/posts/*.md', {
+  render: true,
+  excerpt: true,
+  transform(rawData) {
+    return NTransform(rawData, 'asc')
+  }
+})
+```
+
 ### [page].md
 
 ```markdown
@@ -102,40 +120,11 @@ import { data as posts } from './posts.data.ts'
 ### [page].paths.js
 
 ```js
-import fs from 'fs'
+import { NPathGen } from "vitepress-theme-nex/composables";
 
 export default {
   paths() {
-    const postsDir = 'src/blog/posts';
-    const files = fs.readdirSync(postsDir);
-    const postCount = files.length;
-    const rangeEnd = Math.ceil(postCount / 12); // 向上取整，确保包含所有区间
-
-    // 生成从 1 到 rangeEnd 的序列
-    const pathsSequence = Array.from({ length: rangeEnd }, (_, index) => index + 1);
-
-    // 映射序列中的每个数字为对应的 params 对象
-    return pathsSequence.map((number) => {
-      return { params: { page: number } };
-    });
+    return NPathGen('docs/blog/posts')
   }
 }
-```
-
-### posts.data.ts
-
-```js
-import { createContentLoader } from 'vitepress'
-import { NTransform, type Post } from 'vitepress-theme-nex/composables/transform'
-
-declare const data: Post[]
-export { data }
-
-export default createContentLoader('jobs/posts/*.md', {
-  render: true,
-  excerpt: true,
-  transform(rawData) {
-    return NTransform(rawData, 'asc')
-  }
-})
 ```

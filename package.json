@@ -1,6 +1,6 @@
 {
   "name": "vitepress-theme-nex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "type": "module",
   "exports": {
@@ -23,7 +23,8 @@
   },
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "unbuild"
+    "build": "unbuild",
+    "prepublish": "unbuild"
   },
   "keywords": [
     "vitepress",
