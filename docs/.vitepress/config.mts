@@ -2,12 +2,14 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "VitePress Blog",
-  description: "",
+  title: "VitePress Theme Nex",
+  description: "Blog、更新日志、动态博客",
   lang: 'zh',
   themeConfig: {
     nav: [
-      { text: '快速开始', link: '/docs/start', },
+      { text: '首页', link: '/', },
+      { text: '博客演示', link: '/blog/1', },
+      { text: '反馈', link: 'https://github.com/nexmoe/vitepress-theme-nex/issues', },
     ],
 
     search: {
@@ -30,12 +32,12 @@ export default defineConfig({
       }
     },
 
-    // socialLinks: [
-    //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    // ]
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/nexmoe/vitepress-theme-nex' },
+      { icon: 'twitter', link: 'https://x.com/nexmoe' }
+    ]
 
   },
-  appearance: false, // 关闭暗色模式
   // sitemap: {
   //   hostname: ''
   // }
